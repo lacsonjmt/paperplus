@@ -1,0 +1,1 @@
+export { default as component } from "../../../../src/routes/(app)/archived-episodes/[ptEncounterID]/[unitID]/flowsheet/+page.svelte";

@@ -1,0 +1,637 @@
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+@layer utilities {
+	.striped tr:nth-child(even) {
+		@apply bg-white;
+	}
+	.striped tr:nth-child(even):hover {
+		@apply bg-pplus-gray;
+	}
+
+	.dark-striped tr:nth-child(odd) {
+		@apply bg-dark-light-blue;
+	}
+
+	.dark-striped tr:hover {
+		@apply bg-dark-light-blue opacity-70;
+	}
+}
+
+/**font**/
+body {
+	font-family: 'Outfit', sans-serif;
+}
+/**Colors**/
+/**text**/
+
+.text-pplus-dark-gray {
+	color: #334155;
+}
+
+.text-pplus-blue {
+	color: #203864;
+}
+
+.text-pplus-orange {
+	color: #e03616;
+}
+
+.text-pplus-magenta {
+	color: #f63ced;
+}
+.editBtn {
+	@apply text-blue-500;
+}
+
+.deleteBtn {
+	@apply text-red-600 hover:text-red-500;
+}
+
+/**background colors**/
+
+/* .bg-primary-blue {
+	background-color: #4472C4;
+} */
+
+.bg-primary-blue {
+	background-color: #203864;
+}
+
+.bg-darker-primary-blue {
+	background-color: #0038a6;
+}
+
+.bg-pplus-magenta {
+	background-color: #f63ced;
+}
+
+.bg-dark-blue {
+	background-color: #232d45;
+}
+
+.bg-dark-light-blue {
+	background-color: #354567;
+}
+
+.bg-pplus-light-gray {
+	background-color: #f2f2f2;
+}
+
+.bg-dark-gray {
+	background-color: #334155;
+}
+.bg-light-blue {
+	background-color: #a4c2e5;
+}
+
+.bg-pplus-orange {
+	background-color: #e03616;
+}
+
+.bg-pplus-red {
+	background-color: #ff0000;
+}
+
+.bg-pplus-green {
+	background-color: #419d78;
+}
+.bg-pplus-gray {
+	background-color: #cacaca;
+}
+
+.bg-pplus-yellow {
+	background-color: #ffc90e;
+}
+
+.bg-pplus-yellow-opacity-50 {
+	background-color: rgba(255, 192, 0, 0.5);
+}
+
+/**border**/
+.border-yellow {
+	border: #ffc000;
+}
+.pplus-textbox {
+	@apply w-full text-black  px-2 focus:outline-none focus:bg-gray-200;
+}
+
+/**Buttons**/
+
+/**Modal Buttons**/
+.save-btn {
+	@apply bg-red-600 hover:bg-red-500 text-white py-1 px-2;
+}
+
+.cancel-btn {
+	@apply bg-pplus-gray hover:bg-gray-200 text-blue-800 hover:text-black py-1 px-2 hover:border-transparent;
+}
+
+.delete-btn {
+	@apply bg-pplus-red opacity-90 hover:bg-red-600 text-white py-1 px-2;
+}
+
+/**NAV BUTTONS**/
+.navBtn {
+	@apply p-2 bg-dark-gray w-full text-white;
+}
+.navBtn:hover {
+	@apply bg-dark-light-blue;
+}
+
+.catalogNav button.disabled {
+	@apply bg-pplus-gray text-pplus-blue;
+}
+
+/**Alerts**/
+
+/****/
+.createBtn {
+	@apply mt-3;
+}
+
+.btn-default {
+	@apply bg-pplus-gray hover:bg-gray-200 text-blue-800 hover:text-black py-2 px-4 border border-blue-500 hover:border-transparent;
+}
+
+/**table**/
+
+table thead {
+	@apply bg-primary-blue px-2;
+}
+tbody tr:hover {
+	@apply bg-pplus-gray;
+}
+
+.form-label {
+	@apply block tracking-wide capitalize;
+}
+
+.textbox-readonly {
+	@apply bg-transparent text-center;
+}
+
+.select-filters {
+	@apply border border-gray-300 text-gray-600 px-2 pl-2 pr-8 bg-white;
+}
+
+/**dashboard table**/
+.tableLight th {
+	@apply text-pplus-blue border-b-2 border-top !important;
+	background: white;
+}
+
+/**table selected row**/
+tr.selected {
+	@apply bg-pplus-magenta text-white !important;
+}
+/**PreAdmission**/
+.preAdmission header,
+.dischargedPatientEncounters header {
+	justify-content: end !important;
+}
+
+/* Modal */
+
+.modal-header h2 {
+	@apply uppercase;
+}
+
+.modal .form-label {
+	@apply text-white;
+}
+
+.modal select {
+	@apply bg-white text-black;
+}
+
+.modal table tr td {
+	@apply text-black;
+}
+
+.modal thead {
+	background: transparent !important;
+}
+
+/**dashboard**/
+.card h5:hover {
+	@apply opacity-70 
+	text-black border-gray-700;
+}
+/**Dark**/
+/**Tabs**/
+.tabForms button {
+	@apply py-1 !important;
+}
+
+.tab:hover,
+.tab-list .tab .selected {
+	@apply bg-dark-blue text-white w-full no-underline border-0;
+}
+
+.tab button {
+	@apply text-pplus-dark-gray border-none !important;
+}
+
+.tab button:hover,
+.tab {
+	@apply border-none;
+}
+
+.subTabs button {
+	@apply text-sm;
+}
+
+table.dark thead {
+	@apply bg-dark-blue !important;
+}
+
+.dark thead th {
+	@apply font-normal;
+}
+
+/**Select and options*/
+select {
+	@apply bg-dark-blue text-white;
+}
+
+/**draft table**/
+table {
+	border-collapse: collapse;
+}
+
+th,
+td,
+tr {
+	@apply break-all;
+}
+
+.flowsheet th,
+.flowsheet td,
+.flowsheet tr {
+	@apply break-normal !important;
+}
+
+.border-all {
+	@apply border-[0.25px] border-gray-500;
+}
+
+.border-top {
+	@apply border-t-[0.25px] border-gray-500;
+}
+
+.border-bottom {
+	@apply border-b-[0.25px] border-gray-500;
+}
+
+.border-left {
+	@apply border-l-[0.25px]
+	border-gray-500;
+}
+
+.border-right {
+	@apply border-r-[0.25px] border-gray-500;
+}
+
+/* end of draft table */
+
+.text-print-xxs {
+	font-size: 7px;
+}
+
+.text-print-xs {
+	font-size: 8px;
+	/* @apply italic; */
+}
+
+.text-print-sm {
+	font-size: 9px;
+	@apply h-4;
+}
+.text-print-md {
+	font-size: 10px;
+	@apply h-4;
+}
+
+.dynamic-data {
+	font-size: 8px;
+	@apply h-4;
+}
+.dynamic-data td {
+	@apply border-bottom border-right;
+}
+
+.text-xxs {
+	font-size: 10px;
+}
+
+.label td {
+	@apply border-right;
+}
+
+.label {
+	@apply h-1;
+}
+
+/**arrows**/
+img.arrows,
+img.plus {
+	width: 40px !important;
+}
+
+/**for modal**/
+input,
+select {
+	@apply my-1;
+}
+.inputDateTime {
+	@apply text-black;
+}
+
+/**tabs**/
+.tab.selected,
+a.active li,
+.sidebar li:hover {
+	@apply bg-dark-blue text-white w-full no-underline border-0;
+}
+
+/**Scrollbar**/
+/* width */
+::-webkit-scrollbar {
+	width: 10px;
+	height: 10px;
+}
+
+/* Track */
+::-webkit-scrollbar-track {
+	background: #f1f1f1;
+}
+
+/* Handle */
+::-webkit-scrollbar-thumb {
+	background: #888;
+	border-radius: 10px;
+}
+
+/* Handle on hover */
+::-webkit-scrollbar-thumb:hover {
+	background: #bfbebe;
+}
+
+/**Print**/
+
+
+@media print {
+	.noprint {
+		display: none;
+	}
+	.billingTable {
+		height: 100vh;
+	}
+	
+
+	.print {
+		color: #000;
+		background-color: transparent;
+		margin: 0;
+		padding: 0; }
+
+		table {
+			padding: 0;
+			  page-break-inside: auto;
+		}
+
+		.page {
+			page-break-before: always;
+			/* page-break-after: always; */
+		}
+
+		.row {
+			display: flex;
+			margin-left: -5px;
+			margin-right: -5px;
+		}
+		 tfoot {
+        display: table-footer-group;
+      }
+	}
+
+	table {
+		width: 100%;
+	}
+
+	.column table {
+		margin-top: 0px;
+	}
+
+
+/**shapes**/
+.bolusRectangle {
+	height: 20px;
+	width: 40px;
+	background-color: #0000ff;
+}
+
+.outputRectangle {
+	height: 20px;
+	width: 40px;
+	background-color: #ffff00;
+}
+
+.cellTriangle {
+	position: absolute;
+	top: 0;
+	right: 0;
+	width: 0;
+	height: 0;
+	border-top: 0px solid #f63ced;
+	border-right: 9px solid #f63ced;
+	border-left: 0px solid #f63ced;
+	border-bottom: 7px solid transparent;
+}
+
+.cellZigzag {
+	background-image: url('/img/zigzag.png');
+	background-size: contain;
+	background-repeat: no-repeat;
+	background-position: center;
+}
+
+/**Dark Mode **/
+.darkMode {
+	@apply bg-dark-blue;
+	@apply text-white;
+
+	.moon {
+		display: block;
+	}
+	.tableChart tr th {
+		@apply bg-dark-blue text-white;
+	}
+
+	/* .tableTd {
+		width: fit-content;
+		min-height: 22px;
+		max-height: 22px;
+	} */
+
+	.tableChart tr:nth-child(odd) {
+		@apply bg-dark-blue text-white;
+	}
+
+	.tableChart tr:nth-child(odd) .tableTd {
+		@apply bg-dark-blue text-white;
+	}
+
+	.tr:nth-child(odd) td,
+	tr:nth-child(odd) td {
+		@apply bg-dark-blue;
+	}
+
+	tr > th:first-child,
+	tr:nth-child(even) td {
+		@apply bg-dark-light-blue; /**CACACA**/
+	}
+
+	tr > th:first-child td .tableTd,
+	tr:nth-child(even) td .tableTd {
+		@apply bg-dark-light-blue; /**CACACA**/
+	}
+
+	tr > th:first-child td .tableTd {
+		background: transparent;
+	}
+
+	tr:nth-child(even) td .tableTd {
+		@apply bg-dark-light-blue;
+	}
+
+	.tableChart tr:nth-child(odd) .tableTd {
+		@apply bg-dark-blue;
+	}
+
+	.tableChart tr td:hover {
+		.tableTd {
+			@apply bg-dark-gray;
+		}
+	}
+
+	.tableChart tr:nth-child(odd) .tableTd {
+		@apply bg-dark-blue;
+	}
+
+	thead tr th {
+		@apply bg-dark-blue !important;
+	}
+
+	.navBtn {
+		@apply p-2 bg-dark-gray w-full text-white;
+	}
+	.navBtn:hover {
+		@apply bg-dark-light-blue;
+	}
+
+	.catalogNav button.disabled {
+		@apply bg-pplus-gray text-pplus-blue;
+	}
+	.modal-header {
+		@apply bg-dark-gray;
+	}
+	.headerTable {
+		@apply bg-dark-blue;
+	}
+	table thead {
+		@apply bg-dark-blue text-white !important;
+	}
+
+	table tr td.editable:hover {
+		background-color: #334155;
+	}
+
+	table tr td.eventIcons:hover {
+		background-color: transparent;
+	}
+}
+
+/**Light Mode **/
+
+.lightMode {
+	background-color: #fff;
+	color: #232d45;
+
+	.sun {
+		display: block;
+	}
+
+	.tableChart tr th {
+		background: #ededed;
+		@apply text-pplus-blue border-0;
+	}
+
+	.vitalSignsNumbers li {
+		@apply text-pplus-blue;
+	}
+
+	.darkSubTable tr:nth-child(odd) td {
+		background: #ededed;
+	}
+
+	tr:nth-child(odd) td {
+		background-color: #ededed;
+	}
+	.darkSubTable tr > th:first-child,
+	tr:nth-child(even) td {
+		@apply bg-pplus-gray;
+	}
+	.navBtn {
+		@apply p-2 bg-pplus-gray w-full text-pplus-blue;
+	}
+	.navBtn:hover {
+		@apply bg-dark-light-blue text-white;
+	}
+
+	.catalogNav button.disabled {
+		@apply bg-dark-gray text-white;
+	}
+	.headerTable,
+	table.tableChart tr {
+		background: #ededed !important;
+		@apply text-pplus-blue !important;
+	}
+
+	table thead,
+	table thead th {
+		background: #ededed !important;
+		@apply text-pplus-blue !important;
+	}
+
+	tr td.eventIcons {
+		background: transparent !important;
+		@apply text-pplus-blue !important;
+	}
+
+	.tableChart tr:nth-child(even) .tableTd {
+		@apply text-pplus-blue bg-pplus-gray;
+	}
+	.tableChart tr:nth-child(odd) .tableTd {
+		background: #ededed; /**CACACA**/
+		@apply text-pplus-blue;
+	}
+
+	.tableChart tr td:hover .tableTd {
+		@apply bg-transparent text-white;
+	}
+	/* 
+	tr:nth-child(even) td:hover{
+		.tableTd{
+		@apply bg-dark-gray;
+		} 
+	} */
+
+	.tableChart tr td:hover {
+		.tableTd {
+			@apply bg-dark-gray;
+		}
+	}
+}
