@@ -1,0 +1,203 @@
+{
+	"/(app)": [
+		"src/routes/(app)/+layout.server.ts",
+		"src/routes/+layout.server.ts",
+		"src/routes/(app)/+layout.server.ts",
+		"src/routes/+layout.server.ts"
+	],
+	"/": [
+		"src/routes/+layout.server.ts"
+	],
+	"/admin/(users)": [
+		"src/routes/admin/(users)/+page.server.ts",
+		"src/routes/admin/+layout.server.ts",
+		"src/routes/+layout.server.ts"
+	],
+	"/admin": [
+		"src/routes/admin/+layout.server.ts",
+		"src/routes/+layout.server.ts"
+	],
+	"/admin/client-pcs": [
+		"src/routes/admin/+layout.server.ts",
+		"src/routes/+layout.server.ts"
+	],
+	"/admin/patient-accesses": [
+		"src/routes/admin/+layout.server.ts",
+		"src/routes/+layout.server.ts"
+	],
+	"/api/admissions": [
+		"src/routes/api/admissions/+server.ts"
+	],
+	"/api/admissions/transfers": [
+		"src/routes/api/admissions/transfers/+server.ts"
+	],
+	"/api/anaesthesia-report": [
+		"src/routes/api/anaesthesia-report/+server.ts"
+	],
+	"/api/archived-episodes": [
+		"src/routes/api/archived-episodes/+server.ts"
+	],
+	"/api/beds/[bedID]": [
+		"src/routes/api/beds/[bedID]/+server.ts"
+	],
+	"/api/billing": [
+		"src/routes/api/billing/+server.ts"
+	],
+	"/api/catalog": [
+		"src/routes/api/catalog/+server.ts"
+	],
+	"/api/catalog/[catalogID]/calculation": [
+		"src/routes/api/catalog/[catalogID]/calculation/+server.ts"
+	],
+	"/api/catalog/[catalogID]/list": [
+		"src/routes/api/catalog/[catalogID]/list/+server.ts"
+	],
+	"/api/charted-catalog": [
+		"src/routes/api/charted-catalog/+server.ts"
+	],
+	"/api/charted-catalog/create": [
+		"src/routes/api/charted-catalog/create/+server.ts"
+	],
+	"/api/charted-value": [
+		"src/routes/api/charted-value/+server.ts"
+	],
+	"/api/client-pcs": [
+		"src/routes/api/client-pcs/+server.ts"
+	],
+	"/api/client-pcs/[clientID]": [
+		"src/routes/api/client-pcs/[clientID]/+server.ts"
+	],
+	"/api/clinical-units": [
+		"src/routes/api/clinical-units/+server.ts"
+	],
+	"/api/clinical-units/[unitID]/beds": [
+		"src/routes/api/clinical-units/[unitID]/beds/+server.ts"
+	],
+	"/api/clinical-units/[unitID]/beds/available": [
+		"src/routes/api/clinical-units/[unitID]/beds/available/+server.ts"
+	],
+	"/api/clinical-units/[unitID]/discharged-patient-encounters": [
+		"src/routes/api/clinical-units/[unitID]/discharged-patient-encounters/+server.ts"
+	],
+	"/api/events-notes": [
+		"src/routes/api/events-notes/+server.ts"
+	],
+	"/api/flowsheet": [
+		"src/routes/api/flowsheet/+server.ts"
+	],
+	"/api/flowsheet/auto-charting": [
+		"src/routes/api/flowsheet/auto-charting/+server.ts"
+	],
+	"/api/flowsheet/period": [
+		"src/routes/api/flowsheet/period/+server.ts"
+	],
+	"/api/institution": [
+		"src/routes/api/institution/+server.ts"
+	],
+	"/api/interventions/add": [
+		"src/routes/api/interventions/add/+server.ts"
+	],
+	"/api/io-summary": [
+		"src/routes/api/io-summary/+server.ts"
+	],
+	"/api/logs": [
+		"src/routes/api/logs/+server.ts"
+	],
+	"/api/medications": [
+		"src/routes/api/medications/+server.ts"
+	],
+	"/api/medications/delete": [
+		"src/routes/api/medications/delete/+server.ts"
+	],
+	"/api/medications/stop": [
+		"src/routes/api/medications/stop/+server.ts"
+	],
+	"/api/notes-charted": [
+		"src/routes/api/notes-charted/+server.ts"
+	],
+	"/api/notes": [
+		"src/routes/api/notes/+server.ts"
+	],
+	"/api/patient-accesses": [
+		"src/routes/api/patient-accesses/+server.ts"
+	],
+	"/api/patient-accesses/[bedID]": [
+		"src/routes/api/patient-accesses/[bedID]/+server.ts"
+	],
+	"/api/patient-staffs": [
+		"src/routes/api/patient-staffs/+server.ts"
+	],
+	"/api/patient-statuses": [
+		"src/routes/api/patient-statuses/+server.ts"
+	],
+	"/api/pre-admissions": [
+		"src/routes/api/pre-admissions/+server.ts"
+	],
+	"/api/pre-admissions/delete": [
+		"src/routes/api/pre-admissions/delete/+server.ts"
+	],
+	"/api/roles": [
+		"src/routes/api/roles/+server.ts"
+	],
+	"/api/trend-upload": [
+		"src/routes/api/trend-upload/+server.ts"
+	],
+	"/api/users": [
+		"src/routes/api/users/+server.ts"
+	],
+	"/api/users/[userID]": [
+		"src/routes/api/users/[userID]/+server.ts"
+	],
+	"/api/users/[userID]/clinical-units": [
+		"src/routes/api/users/[userID]/clinical-units/+server.ts"
+	],
+	"/(app)/archived-episodes/[ptEncounterID]/[unitID]/flowsheet": [
+		"src/routes/(app)/archived-episodes/[ptEncounterID]/[unitID]/flowsheet/+page.server.ts",
+		"src/routes/(app)/+layout.server.ts",
+		"src/routes/+layout.server.ts"
+	],
+	"/change-password": [
+		"src/routes/change-password/+page.server.ts",
+		"src/routes/+layout.server.ts"
+	],
+	"/login": [
+		"src/routes/login/+page.server.ts",
+		"src/routes/+layout.server.ts"
+	],
+	"/logout": [
+		"src/routes/logout/+page.server.ts",
+		"src/routes/+layout.server.ts"
+	],
+	"/print": [
+		"src/routes/+layout.server.ts"
+	],
+	"/print/billing": [
+		"src/routes/+layout.server.ts"
+	],
+	"/(app)/[unit]": [
+		"src/routes/(app)/[unit]/+page.server.ts",
+		"src/routes/(app)/+layout.server.ts",
+		"src/routes/+layout.server.ts"
+	],
+	"/(app)/[unit]/[bed]": [
+		"src/routes/(app)/[unit]/[bed]/+page.server.ts",
+		"src/routes/(app)/[unit]/[bed]/+layout.server.ts",
+		"src/routes/(app)/+layout.server.ts",
+		"src/routes/+layout.server.ts",
+		"src/routes/(app)/[unit]/[bed]/+layout.server.ts",
+		"src/routes/(app)/+layout.server.ts",
+		"src/routes/+layout.server.ts"
+	],
+	"/(app)/[unit]/[bed]/[page]": [
+		"src/routes/(app)/[unit]/[bed]/[page]/+page.server.ts",
+		"src/routes/(app)/[unit]/[bed]/+layout.server.ts",
+		"src/routes/(app)/+layout.server.ts",
+		"src/routes/+layout.server.ts"
+	],
+	"/(app)/[unit]/[bed]/[page]/[subpage]": [
+		"src/routes/(app)/[unit]/[bed]/[page]/[subpage]/+page.server.ts",
+		"src/routes/(app)/[unit]/[bed]/+layout.server.ts",
+		"src/routes/(app)/+layout.server.ts",
+		"src/routes/+layout.server.ts"
+	]
+}
