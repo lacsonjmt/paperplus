@@ -9,10 +9,10 @@ node_modules*
 *internal.js
 *$types.d.ts
 /static/uploads/*
+
 .env.*
 !.env.example
 .vercel
 .output
-*.log
 vite.config.js.timestamp-*
 vite.config.ts.timestamp-*
