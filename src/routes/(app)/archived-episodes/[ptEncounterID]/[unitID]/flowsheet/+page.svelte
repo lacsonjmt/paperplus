@@ -33,7 +33,7 @@
                             <span class="intro-x flex items-center">
                                 <img class:grayscale={!data.archivedEpisode.allergy}
                                     alt="allergy icon"
-                                    src="/img/allergy.jpg"
+                                    src="/img/allergy.png"
                                     width="32px"
                                 />
                             </span>

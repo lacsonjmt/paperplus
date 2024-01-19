@@ -140,7 +140,7 @@
                         <li>
                             <img class:grayscale={!dashboardItem.allergy}
                                 class="h-auto w-7"
-                                src="/img/allergy.jpg"
+                                src="/img/allergy.png"
                                 alt="allergy icon"
                                 title={dashboardItem.allergy} />
                         </li>
