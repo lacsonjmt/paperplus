@@ -119,7 +119,7 @@
                     <div class="grid grid-cols-4">
                         <div>
                             <span class="intro-x flex items-center">
-                                <img src="/img/allergy.jpg"
+                                <img src="/img/allergy.png"
                                     class:grayscale={!data.patient.allergy}
                                     alt="allergy icon"
                                     title={data.patient.allergy}
