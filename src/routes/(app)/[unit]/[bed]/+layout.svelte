@@ -71,7 +71,13 @@
     let availableBeds: any[] = [];
     let dischargeLocations: any[] = [];
     let isArchivedEpisode: boolean;
+    let allergyImg: HTMLImageElement;
+
     onMount(async () => {
+
+        if (!data.patient.allergy) {
+            allergyImg.style.filter = 'brightness(40%)';
+        }        
         const unitID = data.clinicalUnit.unitID;
         availableBeds = await(await fetch(`/api/clinical-units/${unitID}/beds/available`)).json();
 
@@ -119,7 +125,8 @@
                     <div class="grid grid-cols-4">
                         <div>
                             <span class="intro-x flex items-center">
-                                <img src="/img/allergy.jpg"
+                                <img bind:this={allergyImg}
+                                    src="/img/allergy.png"
                                     class:grayscale={!data.patient.allergy}
                                     alt="allergy icon"
                                     title={data.patient.allergy}
