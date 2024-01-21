@@ -6,8 +6,7 @@
 	import { onMount } from "svelte";
     import Alert from '$lib/components/Alert.svelte';
     import Fa from 'svelte-fa';
-    import { faMoon, faSun } from '@fortawesome/free-solid-svg-icons';
-    
+    import { faMoon, faSun } from '@fortawesome/free-solid-svg-icons';    
 
     import { addMinutes, roundDownDateTime, roundUpDateTime, toNormalDateTimeString, toStandardDateTimeString } from "$lib/utils/DateTime";
 	import VitalsChart from "$lib/components/FlowSheet/VitalsChart.svelte";
@@ -160,6 +159,7 @@
     let divScroll: HTMLDivElement;
     let divFlowsheetContent;
 
+    const labelCollision = ['23:45', '23:50', '23:55']
 
     let showDateX = 0;
     let showDatePaddingLeft = 0;
@@ -179,7 +179,7 @@
 
         divScroll.addEventListener('scroll', ({ target }) => {
             if(target) {
-                const scrollLeft = target.scrollLeft;
+                const scrollLeft = target.scrollLeft;                
                 showDateX = Math.floor(scrollLeft / 60) * 60;
                 showDatePaddingLeft = scrollLeft % 60;
                 
@@ -274,18 +274,21 @@
                                 {#each dateRangeSegments as dateRangeSegment, index}
                                     {#if dateRangeSegment.isActivated}
                                         {@const dateTimeColumns = getDateTimeColumns(dateRangeSegment.dateTimeStart, dateRangeSegment.dateTimeEnd).map(a => toStandardDateTimeString(a))}
+                                        {@const sliced = dateTimeColumns.slice(0,dateTimeColumns.length-1)}
+                                        {@const zIndex = ((index % dateRangeSegments.length) % 39) + 1}
                                         {#key dateRangeSegment.key}
-                                            <table class="tableChart">
+                                            <table class="tableChart" style="z-index: {40 - zIndex};">
                                                 <thead>
-                                                    <tr class="dateTime">
-                                                        {#each dateTimeColumns as dateTimeColumn, i}
-                                                            {@const xValue = ((index * dateTimeColumns.length) + i) * 60}
-                                                            {#if i < dateTimeColumns.length - 1}
+                                                    <tr class="dateTime h-full">
+                                                        {#each sliced as dateTimeColumn, i}
+                                                            {@const xValue = ((index * sliced.length) + i) * 60}
+                                                            {#if i < sliced.length}
                                                                 {@const momentDateTimeColumn = moment(dateTimeColumn)}
                                                                 <th class="!min-w-[60px] !max-w-[60px] whitespace-nowrap text-xs font-normal" style="overflow: visible; whitespace: nowrap;">
-                                                                    {#if ((!index && !i) && xValue > showDateX)
-                                                                        || momentDateTimeColumn.format('HH:mm') == '00:00'
-                                                                        || xValue == showDateX}
+                                                                    {#if ((!index && !i) && (xValue > showDateX))
+                                                                        || ((momentDateTimeColumn.format('HH:mm') == '00:00') && xValue > showDateX)
+                                                                        || (!(labelCollision.includes(momentDateTimeColumn.format('HH:mm'))                                                                       )
+                                                                        && ((xValue == showDateX)))}
                                                                         <div style="padding-left: {(xValue == showDateX) ? showDatePaddingLeft : 0}px;">
                                                                             {momentDateTimeColumn.format('ddd Y-MM-DD')}
                                                                         </div>
@@ -296,8 +299,8 @@
                                                         {/each}
                                                     </tr>
                                                     <tr class="dateTime">
-                                                        {#each dateTimeColumns as dateTimeColumn, i}
-                                                            {#if i < dateTimeColumns.length - 1}
+                                                        {#each sliced as dateTimeColumn, i}
+                                                            {#if i < sliced.length}
                                                                 <th class="!min-w-[60px] !max-w-[60px] text-left text-xs font-normal">
                                                                     {moment(dateTimeColumn).format('HH:mm')}
                                                                 </th>
