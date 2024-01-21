@@ -7,7 +7,7 @@ node_modules*
 .svelte-kit*
 *ambient.d.ts
 *internal.js
-*$types.d.ts
+*types.d.ts
 /static/uploads/*
 
 .env.*
